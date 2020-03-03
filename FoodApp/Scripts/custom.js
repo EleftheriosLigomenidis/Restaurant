@@ -145,4 +145,15 @@ $(document).ready(function()
 		});
 	}
 
+
+
+	$("#contactBtn").click(function (e) {
+		if ($("#Email").val()) {
+			alert("successs");
+		}
+		else {
+			alert("faileed");
+			e.preventDefault();
+		}
+	});
 });

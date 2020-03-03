@@ -31,7 +31,7 @@ namespace FoodApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Contact(ContactViewModel viewModel)
         {
-           var test = viewModel.ContactMessage;
+            ContactViewModel.SendEmail(viewModel);
 
             return View();
         }
