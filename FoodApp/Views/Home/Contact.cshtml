@@ -1,0 +1,207 @@
+﻿@model FoodApp.ViewModel.ContactViewModel
+
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="super_container">
+
+        <!-- Header -->
+
+        @Html.Partial("_header")
+
+        <!-- Hamburger -->
+
+        @Html.Partial("_hamburger")
+
+        <!-- Menu -->
+
+        @Html.Partial("_menu")
+
+        <!-- Home -->
+
+        <div class="home">
+            <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/Content/images/contact.jpg" data-speed="0.8"></div>
+            <div class="home_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="home_content text-center">
+                                <div class="home_subtitle page_subtitle">The Venue</div>
+                                <div class="home_title"><h1>Contact</h1></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+
+        <div class="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contact_title">Contact info</div>
+                        <div class="contact_text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Ut non justo eleifend, facilisis nibh ut, interdum odio. Suspendisse potenti.</p>
+                        </div>
+                        <div class="contact_logo_container">
+                            <div class="contact_logo_title">The Venue</div>
+                            <div class="contact_logo_subtitle">restaurant</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="contact_list_container d-flex flex-column align-items-lg-center justify-content-start">
+                            <div class="contact_list_content">
+                                <ul class="contact_list">
+                                    <li class="d-flex flex-row align-items-start justify-content-start">
+                                        <div><div>Address</div></div>
+                                        <div>1481 Creekside Lane Avila Beach, CA 931</div>
+                                    </li>
+                                    <li class="d-flex flex-row align-items-start justify-content-start">
+                                        <div><div>Phone</div></div>
+                                        <div>+53 345 7953 324</div>
+                                    </li>
+                                    <li class="d-flex flex-row align-items-start justify-content-start">
+                                        <div><div>E-mail</div></div>
+                                        <div>yourmail@gmail.com</div>
+                                    </li>
+                                </ul>
+                                <div class="contact_social">
+                                    <ul class="d-flex flex-row align-items-center justify-content-start">
+                                        <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <section class="contact-section section_padding" data-parallax="scroll" data-image-src="/Content/images/unnamed.jpg" data-speed="0.8">
+            <div class="container">
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="contact-title" style="color:white">Get in Touch</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <form class="form-contact contact_form"
+                              action="contact_process.php"
+                              method="post"
+                              id="contactForm"
+                              novalidate="novalidate">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control w-100"
+                                                  name="ContactMessage"
+                                                  id="ContactMessage"
+                                                  cols="30"
+                                                  rows="9"
+                                                  onfocus="this.placeholder = ''"
+                                                  onblur="this.placeholder = 'Enter Message'"
+                                                  placeholder="Enter Message"></textarea>
+
+                                        @*@Html.TextAreaFor(m => m.ContactMessage,"Enter message")*@
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control"
+                                               name="Name"
+                                               id="Name"
+                                               type="text"
+                                               onfocus="this.placeholder = ''"
+                                               onblur="this.placeholder = 'Enter your name'"
+                                               placeholder="Enter your name" />
+                           
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control"
+                                               name="Email"
+                                               id="Email"
+                                               type="email"
+                                               onfocus="this.placeholder = ''"
+                                               onblur="this.placeholder = 'Enter email address'"
+                                               placeholder="Enter email address" />
+                              
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        @* 1st way  *@
+                                        <input class="form-control"
+                                               name="ContactSubject"
+                                               id="ContactSubject"
+                                               type="text"
+                                               onfocus="this.placeholder = ''"
+                                               onblur="this.placeholder = 'Enter Subject'"
+                                               placeholder="Enter Subject" />
+
+                                        @* 2nd way  *@
+                                        @*@Html.EditorFor(m => m.)*@
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                               
+                                <input type="submit"  class="button button-contactForm btn_4" style="background-color:orange" name=" Send Message" />
+                            </div>
+                        </form>
+                    </div>
+                    @*<div class="col-lg-4">
+                            <div class="media contact-info">
+                                <span class="contact-info__icon"><i class="ti-home"></i></span>
+                                <div class="media-body">
+                                    <h3>Buttonwood, California.</h3>
+                                    <p>Rosemead, CA 91770</p>
+                                </div>
+                            </div>
+                            <div class="media contact-info">
+                                <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                                <div class="media-body">
+                                    <h3>00 (440) 9865 562</h3>
+                                    <p>Mon to Fri 9am to 6pm</p>
+                                </div>
+                            </div>
+                            <div class="media contact-info">
+                                <span class="contact-info__icon"><i class="ti-email"></i></span>
+                                <div class="media-body">
+                                    <h3>support@colorlib.com</h3>
+                                    <p>Send us your query anytime!</p>
+                                </div>
+                            </div>
+                        </div>*@
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservations -->
+
+        @Html.Partial("_reservation")
+
+        <!-- Footer -->
+
+        @Html.Partial("_footer")
+    </div>
+}
+
+
+
+
+
+
+
+
