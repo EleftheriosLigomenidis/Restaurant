@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using FoodApp.Repositories;
-namespace FoodApp.UnitOfWork
+namespace FoodApp.DAL
 {
     public interface IUnitOfWork
     {

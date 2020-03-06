@@ -5,10 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace FoodApp.UnitOfWork
+namespace FoodApp.DAL
 {
     public class UnitOfWork : IUnitOfWork
     {
+
+        //Documentation: In order for the injection to work you need to install Unity for MVC5 and register your repositories and their associate interfaces  into the bootstrapper class
+        // Create the bootstraper class manually copying the code from this project
+
+
         private readonly ApplicationDbContext _context;
         public IDishRepository Dishes { get; set; }
         public IOrderRepository Orders { get; set; }
@@ -21,7 +26,7 @@ namespace FoodApp.UnitOfWork
 
         public UnitOfWork(ApplicationDbContext context)
         {
-            context = _context;
+            _context = context;
             Orders = new OrderRepository(context);
             Reservations = new ReservationRepository(context);
             Tables = new TableRepository(context);
