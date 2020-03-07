@@ -295,6 +295,7 @@
     <Content Include="Content\images\tab.jpg" />
     <Content Include="Content\images\testimonials.jpg" />
     <Content Include="Content\images\video.jpg" />
+    <Content Include="Content\Login.css" />
     <Content Include="Content\main.css" />
     <Content Include="Content\main_styles.css" />
     <Content Include="Content\menu.css" />
@@ -390,6 +391,9 @@
     <Content Include="plugins\font-awesome-4.7.0\scss\_stacked.scss" />
     <Content Include="plugins\font-awesome-4.7.0\scss\_variables.scss" />
     <Content Include="plugins\jquery-datepicker\package.json" />
+    <Content Include="fonts\edwardian_script_itc.otf" />
+    <Content Include="fonts\edwardian_script_itc.ttf" />
+    <Content Include="fonts\Ubuntu-Regular.ttf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\contact.js" />
     <Content Include="Scripts\custom.js" />
