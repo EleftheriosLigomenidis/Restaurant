@@ -11,7 +11,6 @@ namespace FoodApp.Models
         public int Capacity { get; set; }
         public bool IsBooked { get; set; }
 
-        public int MyProperty { get; set; }
 
 
     }

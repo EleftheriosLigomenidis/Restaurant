@@ -12,7 +12,7 @@ namespace FoodApp.Models
 
         public double Price { get; set; }
         public DishType DishType { get; set; }
-        public virtual List<Ingredient> Ingredients { get; set; }
+        public virtual List<Dish> Dishes { get; set; }
         public bool IsPopular { get; set; }
 
     }

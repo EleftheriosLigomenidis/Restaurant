@@ -10,6 +10,8 @@ namespace FoodApp.Controllers
     {
         public ActionResult Index()
         {
+
+
             return View();
         }
 
@@ -31,7 +33,7 @@ namespace FoodApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Contact(ContactViewModel viewModel)
         {
-            ContactViewModel.SendEmail(viewModel);
+           var test = viewModel.ContactMessage;
 
             return View();
         }

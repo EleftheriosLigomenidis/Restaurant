@@ -11,7 +11,7 @@ namespace FoodApp.Persistence
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("RestaurantApp", throwIfV1Schema: false)
         {
         }
 
